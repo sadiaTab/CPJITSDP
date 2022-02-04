@@ -38,4 +38,6 @@ improvements in G-mean of up to 53.89% and up to 35.02% at the initial stage of 
    ```
   </li>
 </ul>
-
+   ```sh
+npm install npm@latest -g
+   ```
