@@ -88,17 +88,37 @@ Attributes[16]: Timestamp when the commit was submitted to the repository.
 </li>
 <li>Attributes[17]: Index number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. </li>
 <li>Attributes[18]: commit_type is a number selected based on the following scenario:
-  <ul>
-    <li>The commit is not buggy: commit_type 0</li>
-    <li>For target project:</li>
-    <ul>
-      <li>The commit is buggy but its true label was not found within W days: commit_type 1</li>
-      <li>The commit is buggy and its true label was found within W days: commit_type 2</li>
-    </ul>
-    <li>The true label of a defective commit was assigned (for all projects): commit_type 3</li>
-    <li>For cross projects:
-      <ul>
-        <li>The commit is buggy but its true label was not found within W days: commit_type 4</li>
-      </ul>
-  </ul>
-</li>
+  <ol>
+    <li>The commit is not buggy. 
+      <ol><li>Test if from target project</li>
+        <li>Train as clean</li>
+        <li>Assign commit_type 0</li>
+      </ol>
+    </li>
+    <li>For target project, the commit is buggy but its true label was not found within W days.
+      <ol><li> Test</li>
+        <li>Create duplicate of the instance to train as defective after w days.</li> 
+        <li>Assign commit_type 1</li>
+      </ol>
+    </li>
+    <li>For target project, the commit is buggy and its true label was found within W days.
+      <ol><li>Test</li>
+        <li>Assign commit_type 2</li>
+      </ol>
+    </li>
+    <li>The true label of a defective commit was assigned (for all projects)
+      <ol>
+        <li>Train as defect-inducing</li>
+        <li>Assign commit_type 3</li>
+      </ol>
+    </li>
+    <li>For cross projects, the commit is buggy but its true label was not found within W days.
+      <ol><li>Train as defect-inducing</li>
+        <li>Assign commit_type 4</li>
+      </ol>
+    </li>
+  </ol>
+</ul>
+
+<h3>Dataset processing</h3>
+AIO and Filtering approaches: All CP and WP data are combined together maintaing the chronology and verification latency
