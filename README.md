@@ -1,6 +1,5 @@
 <h1>Cross-Project Online Just-In-Time Software
 Defect Prediction 
-(Online CPJITSDP)
 </h1>
 
 The repository contains:
