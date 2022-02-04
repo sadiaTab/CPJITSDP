@@ -20,3 +20,9 @@ improvements in G-mean of up to 53.89% and up to 35.02% at the initial stage of 
   <li>Sadia Tabassum (sxt901 at student dot bham dot ac dot uk)</li>
   <li>Leandro Minku (L dot L dot Minku at bham dot ac dot uk)</li>
 </ul>
+
+<h3>Environment details:</h3>
+<ul>
+  <li>MOA: 2018.6.0</li>
+  <li>JDK and JRE 1.8</li>
+</ul>
