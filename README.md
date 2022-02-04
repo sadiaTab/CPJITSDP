@@ -2,8 +2,7 @@
 Defect Prediction 
 (Online CPJITSDP)
 </h1>
-<hr>
-<br>
+
 The repository contains:
 <ul>
   <li>Java implementation of online cross-project approaches introduced in "An Investigation of Cross-Project Learning in Online
