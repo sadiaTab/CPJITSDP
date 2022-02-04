@@ -81,13 +81,13 @@ Datasets used in the experiments are in ARFF format. The ARFF file must contain 
 <li>
 Attributes[1-14]: Software change metrics.</li>
 <li>
-Attributes[15]: True label of the commit (whether the commit is really defect-inducing or clean).
+Attribute[15]: True label of the commit (whether the commit is really defect-inducing or clean).
 </li>
 <li>
-Attributes[16]: Timestamp when the commit was submitted to the repository. 
+Attribute[16]: Timestamp when the commit was submitted to the repository. 
 </li>
-<li>Attributes[17]: Index number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. </li>
-<li>Attributes[18]: commit_type is a number selected based on the following scenario:
+<li>Attribute[17]: Index number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. </li>
+<li>Attribute[18]: commit_type is a number selected based on the following scenario:
   <ol>
     <li>The commit is not buggy. 
       <ol><li>Test if from target project</li>
