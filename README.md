@@ -42,8 +42,11 @@ CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+wa
 <ul>
   <li>CpjitsdpAIO: Online CPJITSDP approach.</li>
   <li>-i 15 - the position of the unixtimestamp of the commit in the arff</li>
-  <li>-s 20 - the ensemble size</li>
-  <li>-t 0.99 - the fading factor[3] used for computing the class sizes</li>
-  <li>-w 90 - the waiting time for assuming the commit label is available</li>
-  <li>-p 100;0.4;10;12;1.5;3 - the parameters for the ORB.</li>
+  <li>-s - the ensemble size</li>
+  <li>-t - the fading factor used for computing the class sizes</li>
+  <li>-w - the waiting time for assuming the commit label is available</li>
+  <li>-p - the parameters for the ORB.</li>
+  <li>-s,-t,-w and -p can be passed as arguments. </li>
+  <li>Default values for -s,-t,-w and -p are (20,0.99,90 and 100;0.4;10;12;1.5;3)</li>
 </ul>
+
