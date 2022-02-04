@@ -32,8 +32,18 @@ improvements in G-mean of up to 53.89% and up to 35.02% at the initial stage of 
   <li>Go to the directory src/cpjitsdpexperiment</li>
   <li>There are 4 experiment files- ExpAIO, ExpFilter, ExpOPAIO and ExpOPFilter for online cpjitsdp approaches (AIO, Filter, OPAIO and OPFilter, respectively).</li>
   <li>Run appropriate experiment file (i.e. cpjitsdpexperiment.ExpAIO.java)</li>
-  <li>Example command: 
-  `CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+waitingTime+" -p "+paramsORB+")  -s  (ArffFileStream -f (datasets/"+datasetsArray[dsIdx]+".arff) -c 15) -e (FadingFactorEachClassPerformanceEvaluator -a 0.99) -f 1 -d results/results.csv"`
-  </li>
 </ul>
 
+Example command (can be found in the experiment files):
+
+```
+CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+waitingTime+" -p "+paramsORB+")  -s  (ArffFileStream -f (datasets/"+datasetsArray[dsIdx]+".arff) -c 15) -e (FadingFactorEachClassPerformanceEvaluator -a 0.99) -f 1 -d results/results.csv"
+```
+<ul>
+  <li>CpjitsdpAIO: Online CPJITSDP approach.</li>
+  <li>-i 15 - the position of the unixtimestamp of the commit in the arff</li>
+  <li>-s 20 - the ensemble size</li>
+  <li>-t 0.99 - the fading factor[3] used for computing the class sizes</li>
+  <li>-w 90 - the waiting time for assuming the commit label is available</li>
+  <li>-p 100;0.4;10;12;1.5;3 - the parameters for the ORB.</li>
+</ul>
