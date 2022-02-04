@@ -26,3 +26,11 @@ improvements in G-mean of up to 53.89% and up to 35.02% at the initial stage of 
   <li>MOA 2018.6.0</li>
   <li>JDK and JRE 1.8</li>
 </ul>
+
+<h2>To run experiments for CPJITSDP</h2>
+<ul>
+  <li>Go to the directory cpjitsdpexperiment</li>
+  <li>There are 4 experiment files- ExpAIO, ExpFilter, ExpOPAIO and ExpOPFilter for AIO, Filter, OPAIO and OPFilter online cpjitsdp approaches, respectively.</li>
+  <li>Run appropriate experiment file (i.e. cpjitsdpexperiment.ExpAIO.java)</li>
+</ul>
+
