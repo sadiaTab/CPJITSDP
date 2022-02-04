@@ -23,6 +23,6 @@ improvements in G-mean of up to 53.89% and up to 35.02% at the initial stage of 
 
 <h3>Environment details:</h3>
 <ul>
-  <li>MOA: 2018.6.0</li>
+  <li>MOA 2018.6.0</li>
   <li>JDK and JRE 1.8</li>
 </ul>
