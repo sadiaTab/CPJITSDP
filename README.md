@@ -86,7 +86,7 @@ Attributes[15]: True label of the commit (whether the commit is really defect-in
 <li>
 Attributes[16]: Timestamp when the commit was submitted to the repository. 
 </li>
-<li>Attributes[17]: Serial number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. </li>
+<li>Attributes[17]: Index number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. </li>
 <li>Attributes[18]: commit_type is a number selected based on the following scenario:
   <ul>
     <li>The commit is not buggy: commit_type 0</li>
