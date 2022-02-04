@@ -50,7 +50,7 @@ CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+wa
   <li>Default values for -s,-t,-w and -p are (20,0.99,90 and 100;0.4;10;12;1.5;3)</li>
 </ul>
 
-<h2>Datasets Processing Details</h2>
+<h2>Datasets</h2>
 Datasets used in the experiments are in ARFF format. The ARFF file must contain header with the following attributes and must maintain the order of the attributes.
 
 ```
@@ -74,23 +74,31 @@ Datasets used in the experiments are in ARFF format. The ARFF file must contain 
     @attribute project_no numeric
     @attribute commit_type numeric
     @data
-  
-```
-
-Attributes[1-14]: Software change metrics.
-Attributes[15]: True label of the commit (whether the commit is really defect-inducing or clean).
-Attributes[16]: Timestamp when the commit was submitted to the repository. 
-Attributes[17]: Serial number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. 
-Attributes[18]: commit_type is a number selected based on the following scenario:
-```
-    // the commit is not buggy
-    private static final int NOT_BUG = 0;
-    // the commit is buggy but its true label was not found within W days
-    private static final int BUG_NOT_DISCOVERED_W_DAYS_TEST = 1;
-    // the commit is buggy and its true label was found within W days
-    private static final int BUG_DISCOVERED_W_DAYS_TEST = 2;
-    // the true label of a defective commit was assigned.
-    private static final int BUG_FOUND = 3;
-    private static final int BUG_NOT_DISCOVERED_W_DAYS_NOT_TEST = 4;
     
 ```
+
+<ul>
+<li>
+Attributes[1-14]: Software change metrics.</li>
+<li>
+Attributes[15]: True label of the commit (whether the commit is really defect-inducing or clean).
+</li>
+<li>
+Attributes[16]: Timestamp when the commit was submitted to the repository. 
+</li>
+<li>Attributes[17]: Serial number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. </li>
+<li>Attributes[18]: commit_type is a number selected based on the following scenario:
+  <ul>
+    <li>The commit is not buggy: commit_type 0</li>
+    <li>For target project:</li>
+    <ul>
+      <li>The commit is buggy but its true label was not found within W days: commit_type 1</li>
+      <li>The commit is buggy and its true label was found within W days: commit_type 2</li>
+    </ul>
+    <li>The true label of a defective commit was assigned (for all projects): commit_type 3</li>
+    <li>For cross projects:
+      <ul>
+        <li>The commit is buggy but its true label was not found within W days: commit_type 4</li>
+      </ul>
+  </ul>
+</li>
