@@ -120,5 +120,3 @@ Attributes[16]: Timestamp when the commit was submitted to the repository.
   </ol>
 </ul>
 
-<h3>Dataset processing</h3>
-AIO and Filtering approaches: All CP and WP data are combined together maintaing the chronology and verification latency
