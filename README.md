@@ -83,13 +83,14 @@ Attributes[16]: Timestamp when the commit was submitted to the repository.
 Attributes[17]: Serial number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. 
 Attributes[18]: commit_type is a number selected based on the following scenario:
 ```
-	// the commit is not buggy
-	private static final int NOT_BUG = 0;
-	// the commit is buggy but its true label was not found within W days
-	private static final int BUG_NOT_DISCOVERED_W_DAYS_TEST = 1;
-	// the commit is buggy and its true label was found within W days
-	private static final int BUG_DISCOVERED_W_DAYS_TEST = 2;
-	// the true label of a defective commit was assigned.
-	private static final int BUG_FOUND = 3;
-	private static final int BUG_NOT_DISCOVERED_W_DAYS_NOT_TEST = 4;
-  ```
+    // the commit is not buggy
+    private static final int NOT_BUG = 0;
+    // the commit is buggy but its true label was not found within W days
+    private static final int BUG_NOT_DISCOVERED_W_DAYS_TEST = 1;
+    // the commit is buggy and its true label was found within W days
+    private static final int BUG_DISCOVERED_W_DAYS_TEST = 2;
+    // the true label of a defective commit was assigned.
+    private static final int BUG_FOUND = 3;
+    private static final int BUG_NOT_DISCOVERED_W_DAYS_NOT_TEST = 4;
+    
+```
