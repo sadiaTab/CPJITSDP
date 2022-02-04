@@ -32,5 +32,10 @@ improvements in G-mean of up to 53.89% and up to 35.02% at the initial stage of 
   <li>Go to the directory src/cpjitsdpexperiment</li>
   <li>There are 4 experiment files- ExpAIO, ExpFilter, ExpOPAIO and ExpOPFilter for online cpjitsdp approaches (AIO, Filter, OPAIO and OPFilter, respectively).</li>
   <li>Run appropriate experiment file (i.e. cpjitsdpexperiment.ExpAIO.java)</li>
+  <li>Example command: 
+    ```sh
+  CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+waitingTime+" -p "+paramsORB+")  -s  (ArffFileStream -f (datasets/"+datasetsArray[dsIdx]+".arff) -c 15) -e (FadingFactorEachClassPerformanceEvaluator -a 0.99) -f 1 -d results/results.csv"
+   ```
+  </li>
 </ul>
 
