@@ -50,6 +50,17 @@ CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+wa
   <li>Default values for -s,-t,-w and -p are (20,0.99,90 and 100;0.4;10;12;1.5;3)</li>
 </ul>
 
+MOA parameters:
+<ul>
+  <li>-l the machine learning algorithm to be used.</li>
+
+<li>-s (ArffFileStream -f -c ) is the path to the dataset in arff format, with -c indicating the index of the class label in the dataset file.</li>
+
+<li>-e (FadingFactorEachClassPerformanceEvaluator -a ) is the performance evaluator to be used, with -a indicating the fading factor to be adopted.</li>
+
+<li>-d is the path to the output file where the results of the experiments will be saved.</li>
+</ul>
+
 <h2>Datasets</h2>
 Datasets used in the experiments are in ARFF format. The ARFF file must contain header with the following attributes and must maintain the order of the attributes.
 
