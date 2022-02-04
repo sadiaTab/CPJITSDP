@@ -59,4 +59,4 @@ Lists of 60 third-party dependencies.
      (BSD license) MarkdownJ Core (org.markdownj:markdownj-core:0.4 - http://markdownj.org/markdownj-core/)
      (BSD-like) Scala Library (org.scala-lang:scala-library:2.10.2 - http://www.scala-lang.org/)
      (BSD-like) Scala Swing library (org.scala-lang:scala-swing:2.10.2 - http://www.scala-lang.org/)
-     (the Apache License, ASL Version 2.0) ScalaTest Maven Plugin (org.scalatest:scalatest-maven-plugin:1.0-M2 - http://nexus.sonatype.org/oss-repository-hosting.html/scalatest-maven-plugin)
+     (the Apache License, ASL Version 2.0) ScalaTest Maven Plugin (org.scalatest:scalatest-maven-plugin:1.0-M2 - http://nexus.sonatype.org/oss-repository-hosting.html/scalatest-maven-plugin)  
