@@ -46,7 +46,7 @@ CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+wa
   <li>-t - the fading factor used for computing the class sizes</li>
   <li>-w - the waiting time for assuming the commit label is available</li>
   <li>-p - the parameters for the ORB.</li>
-  <li>-s,-t,-w and -p can be passed as arguments. </li>
+  <li>Values for -s,-t,-w and -p can be passed as arguments. </li>
   <li>Default values for -s,-t,-w and -p are (20,0.99,90 and 100;0.4;10;12;1.5;3)</li>
 </ul>
 
