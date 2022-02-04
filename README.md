@@ -87,7 +87,7 @@ Attribute[15]: True label of the commit (whether the commit is really defect-ind
 Attribute[16]: Timestamp when the commit was submitted to the repository. 
 </li>
 <li>Attribute[17]: Index number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. </li>
-<li>Attribute[18]: commit_type is a number selected based on the following scenario:
+<li>Attribute[18]: commit_type is a number assigned based on the following scenario:
   <ol>
     <li>The commit x is not buggy. 
       <ol><li>Update timstamp of commit "x" by adding verification latency (waiting period W).</li>
