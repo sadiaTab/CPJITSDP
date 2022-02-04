@@ -40,7 +40,7 @@ Example command (can be found in the experiment files):
 CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+waitingTime+" -p "+paramsORB+")  -s  (ArffFileStream -f (datasets/tomcat.arff) -c 15) -e (FadingFactorEachClassPerformanceEvaluator -a 0.99) -f 1 -d results/results.csv"
 ```
 <ul>
-  <li>CpjitsdpAIO: Online CPJITSDP approach.</li>
+  <li>CpjitsdpAIO: Online CPJITSDP approach to run.</li>
   <li>-i 15 - the position of the unixtimestamp of the commit in the arff</li>
   <li>-s - the ensemble size</li>
   <li>-t - the fading factor used for computing the class sizes</li>
