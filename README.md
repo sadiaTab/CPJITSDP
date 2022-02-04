@@ -27,7 +27,7 @@ improvements in G-mean of up to 53.89% and up to 35.02% at the initial stage of 
   <li>JDK and JRE 1.8</li>
 </ul>
 
-<h2>To run experiments for CPJITSDP</h2>
+<h2>To run experiments for Online CPJITSDP</h2>
 <ul>
   <li>Go to the directory src/cpjitsdpexperiment</li>
   <li>There are 4 experiment files- ExpAIO, ExpFilter, ExpOPAIO and ExpOPFilter for online cpjitsdp approaches (AIO, Filter, OPAIO and OPFilter, respectively).</li>
@@ -50,3 +50,46 @@ CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+wa
   <li>Default values for -s,-t,-w and -p are (20,0.99,90 and 100;0.4;10;12;1.5;3)</li>
 </ul>
 
+<h2>Datasets Processing Details</h2>
+Datasets used in the experiments are in ARFF format. The ARFF file must contain header with the following attributes and must maintain the order of the attributes.
+
+```
+
+    @attribute fix {False,True}
+    @attribute ns numeric
+    @attribute nd numeric
+    @attribute nf numeric
+    @attribute entrophy numeric
+    @attribute la numeric
+    @attribute ld numeric
+    @attribute lt numeric
+    @attribute ndev numeric
+    @attribute age numeric
+    @attribute nuc numeric
+    @attribute exp numeric
+    @attribute rexp numeric
+    @attribute sexp numeric
+    @attribute contains_bug {False,True}
+    @attribute author_date_unix_timestamp numeric
+    @attribute project_no numeric
+    @attribute commit_type numeric
+    @data
+  
+```
+
+Attributes[1-14]: Software change metrics.
+Attributes[15]: True label of the commit (whether the commit is really defect-inducing or clean).
+Attributes[16]: Timestamp when the commit was submitted to the repository. 
+Attributes[17]: Serial number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. 
+Attributes[18]: commit_type is a number selected based on the following scenario:
+```
+	// the commit is not buggy
+	private static final int NOT_BUG = 0;
+	// the commit is buggy but its true label was not found within W days
+	private static final int BUG_NOT_DISCOVERED_W_DAYS_TEST = 1;
+	// the commit is buggy and its true label was found within W days
+	private static final int BUG_DISCOVERED_W_DAYS_TEST = 2;
+	// the true label of a defective commit was assigned.
+	private static final int BUG_FOUND = 3;
+	private static final int BUG_NOT_DISCOVERED_W_DAYS_NOT_TEST = 4;
+  ```
