@@ -112,35 +112,26 @@ Attribute[16]: Timestamp when the commit was submitted to the repository.
     <li>The commit x is not buggy. 
       <ol>
         <li>Assign commit_type 0</li>
-        <li> "x" will be tested only if it is from target project and will be trained as clean</li>
       </ol>
     </li>
     <li>For target project, the commit is buggy but its true label was not found within W days.
       <ol>
-        <li>Update timstamp of commit "x" by adding verification latency (waiting period W).</li>
-        <li>Create duplicate of the commit, "x^"; update timestamp of "x^" by adding days_to_fix and assign label defect-inducing.</li> 
         <li>Assign commit_type 1</li>
-        <li>"x" will be tested and will be trained as clean
       </ol>
     </li>
     <li>For target project, the commit is buggy and its true label was found within W days.
       <ol>
-        <li>Update timstamp of commit "x" by adding verification latency (waiting period W).</li>
         <li>Assign commit_type 2</li>
-        <li>"x" will be tested</li>
       </ol>
     </li>
     <li>For cross projects, the commit "x" is buggy but its true label was not found within W days.
       <ol>
         <li>Assign commit_type 4</li>
-        <li>Create duplicate of the commit, "x^"; update timestamp of "x^" by adding days_to_fix and assign label defect-inducing.</li> 
-        <li>"x" will be trained as clean</lI>
       </ol>
     </li>
     <li>The true label of a defective commit was assigned (for all projects)
       <ol>
         <li>Assign commit_type 3</li>
-        <li>"x" will be trained as defect-inducing</li>
       </ol>
     </li>
   </ol>
