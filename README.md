@@ -96,7 +96,17 @@ Attribute[15]: True label of the commit (whether the commit is really defect-ind
 <li>
 Attribute[16]: Timestamp when the commit was submitted to the repository. 
 </li>
-<li>Attribute[17]: Index number associated to a project. For example, in this paper, project_no for Tomcat is 0 and JGroups is 1. </li>
+<li>Attribute[17]: Index number associated to a project. For example, in this paper, following array is used for the datasets. Index of this array is passed as argument dsIdx in the command. This index is the index of the target project. For example,  for Tomcat, dsIdx=0, for JGroups, dsIdx=1 etc. 
+
+```
+
+  datasetsArray = {"tomcat","JGroups","spring-integration",
+				"camel","brackets","nova","fabric8",
+				"neutron","npm","BroadleafCommerce"
+		}
+```
+  
+  </li>
 <li>Attribute[18]: commit_type is a number assigned based on the following scenario:
   <ol>
     <li>The commit x is not buggy. 
