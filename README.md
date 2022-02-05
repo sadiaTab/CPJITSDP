@@ -127,10 +127,9 @@ For each commit x:
 		Add an instance with: 
 			Software change metrics=Attributes[1-14], contains_bug=False, timestamp=[author_date_unix_timestamp], 
 			project_no=relevant project index, commit_type=0
-
-			If x is from target project:
+			(If x is from target project:
 				Test x as clean at timestamp=[author_date_unix_timestamp]
-			Train x as clean at timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)]
+			Train x as clean at timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)])
 	If x is buggy:
 			If days_to_first_fix > W:
 				Add an instance for training with:
