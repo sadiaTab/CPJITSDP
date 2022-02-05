@@ -1,5 +1,5 @@
 /*
- *    EvaluatePrequentialFiltering.java
+ *    CpjitsdpFiltering.java
  *    
  *    Copyright (C) 2022 University of Birmingham, Birmingham, United Kingdom
  *    @author Sadia Tabassum (sxt901@student.bham.ac.uk)
