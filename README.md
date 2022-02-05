@@ -113,19 +113,9 @@ Attribute[16]: Timestamp when the commit was submitted to the repository.
 ```
   
   </li>
-<li>Attribute[18]: commit_type is a number assigned based on the following scenario:
-  <ol>
-    <li>The commit is not buggy: commit_type 0</li>
-    <li>For target project, the commit is buggy but its true label was not found within W days: commit_type 1</li>
-    <li>For target project, the commit is buggy and its true label was found within W days: commit_type 2</li>
-    <li>For cross projects, the commit is buggy but its true label was not found within W days: commit_type 4</li>
-    <li>The true label of a defective commit was assigned (for all projects): commit_type 3</li>
-  </ol>
+  <li>Attribute[18]: commit_type is a number assigned based on the following scenario:
+  
 </ul>
-
-
-<h3> Data processing steps</h3>
-Data is processed using the following steps. After the processing, processed data needs to be sorted in ascending order of the timestamp to mainitain the chronology. 
 
 ```
 
@@ -169,6 +159,7 @@ For each commit x:
 					
 
 ```					
-				
+After the processing, processed data needs to be sorted in ascending order of the timestamp to mainitain the chronology.
+
 Note: MOA is provided within this repo under the GPL 3 license.	
 Online CPJITSDP makes use of opensource code for ORB in http://doi.org/10.5281/zenodo.2555695.
