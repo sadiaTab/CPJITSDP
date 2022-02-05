@@ -40,7 +40,7 @@ CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+wa
 ```
 <ul>
   <li>CpjitsdpAIO: Online CPJITSDP approach to run.</li>
-  <li>-i 15 - the position of the unixtimestamp of the commit in the arff</li>
+  <li>-i - the position of the unixtimestamp of the commit in the arff</li>
   <li>-s - the ensemble size</li>
   <li>-t - the fading factor used for computing the class sizes</li>
   <li>-w - the waiting time for assuming the commit label is available</li>
