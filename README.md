@@ -170,4 +170,5 @@ For each commit x:
 
 ```					
 				
-	
+Note: MOA is provided within this repo under the GPL 3 license.	
+Online CPJITSDP makes use of opensource code for ORB in http://doi.org/10.5281/zenodo.2555695.
