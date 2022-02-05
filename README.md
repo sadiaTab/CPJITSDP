@@ -101,8 +101,8 @@ Attribute[16]: Timestamp when the commit was submitted to the repository.
 ```
 
   datasetsArray = {"tomcat","JGroups","spring-integration",
-				"camel","brackets","nova","fabric8",
-				"neutron","npm","BroadleafCommerce"
+		   "camel","brackets","nova","fabric8",
+		   "neutron","npm","BroadleafCommerce"
 		}
 ```
   
