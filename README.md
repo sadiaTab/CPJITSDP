@@ -131,29 +131,29 @@ For each commit x:
 				Test x as clean at timestamp=[author_date_unix_timestamp]
 			Train x as clean at timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)])
 	If x is buggy:
-			If days_to_first_fix > W:
-				Add an instance for training with:
+		If days_to_first_fix > W:
+			Add an instance for training with:
 					Software change metrics=Attributes[1-14], contains_bug=True, 
 					timestamp=[author_date_unix_timestamp]+[days_to_first_fix (converted into unix_timestamp)], 					 				project_no=relevant project index, commit_type=3
 					
-				If x is from target project:	
-					Add an instance for training with:
+			If x is from target project:	
+				Add an instance for training with:
 						Software change metrics=Attributes[1-14], contains_bug=False, 
 						timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)], 						    	    			project_no=relevant project index, commit_type=0
-					Add an instance for testing with:
+				Add an instance for testing with:
 							Software change metrics=Attributes[1-14], contains_bug=True, timestamp=[author_date_unix_timestamp], 						    	    	project_no=relevant project index, commit_type=1
 							
-				If x is not from target project:
-					Add an instance for training with:
+			If x is not from target project:
+				Add an instance for training with:
 						Software change metrics=Attributes[1-14], contains_bug=False, 
 						timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)], 						    	    			project_no=relevant project index, commit_type=4
 						
-			If days_to_first_fix <= W:
-				Add an instance for training with :
+		If days_to_first_fix <= W:
+			Add an instance for training with :
 					Software change metrics=Attributes[1-14], contains_bug=True, 
 					timestamp=[author_date_unix_timestamp]+[days_to_first_fix (converted into unix_timestamp)], 					 				project_no=relevant project index, commit_type=3
-				If x is from target project:
-					Add an instance for testing with :
+			If x is from target project:
+				Add an instance for testing with :
 						Software change metrics=Attributes[1-14], contains_bug=True, 
 						timestamp=[author_date_unix_timestamp], project_no=relevant project index, commit_type=2
 					
