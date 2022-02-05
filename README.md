@@ -40,7 +40,7 @@ CpjitsdpAIO -l (spdisc.meta.WFL_OO_ORB_Oza -i 15 -s "+ens+" -t "+theta+" -w "+wa
 ```
 <ul>
   <li>CpjitsdpAIO: Online CPJITSDP approach to run.</li>
-  <li>-i - the position of the unixtimestamp of the commit in the arff</li>
+  <li>-i 15 - the position of the unixtimestamp of the commit in the arff</li>
   <li>-s - the ensemble size</li>
   <li>-t - the fading factor used for computing the class sizes</li>
   <li>-w - the waiting time for assuming the commit label is available</li>
@@ -110,7 +110,7 @@ Attribute[16]: Timestamp when the commit was submitted to the repository.
 <li>Attribute[18]: commit_type is a number assigned based on the following scenario:
   <ol>
     <li>The commit x is not buggy. 
-      <ol><li>Update timstamp of commit "x" by adding verification latency (waiting period W).</li>
+      <ol>
         <li>Assign commit_type 0</li>
         <li> "x" will be tested only if it is from target project and will be trained as clean</li>
       </ol>
