@@ -109,31 +109,11 @@ Attribute[16]: Timestamp when the commit was submitted to the repository.
   </li>
 <li>Attribute[18]: commit_type is a number assigned based on the following scenario:
   <ol>
-    <li>The commit x is not buggy. 
-      <ol>
-        <li>Assign commit_type 0</li>
-      </ol>
-    </li>
-    <li>For target project, the commit is buggy but its true label was not found within W days.
-      <ol>
-        <li>Assign commit_type 1</li>
-      </ol>
-    </li>
-    <li>For target project, the commit is buggy and its true label was found within W days.
-      <ol>
-        <li>Assign commit_type 2</li>
-      </ol>
-    </li>
-    <li>For cross projects, the commit "x" is buggy but its true label was not found within W days.
-      <ol>
-        <li>Assign commit_type 4</li>
-      </ol>
-    </li>
-    <li>The true label of a defective commit was assigned (for all projects)
-      <ol>
-        <li>Assign commit_type 3</li>
-      </ol>
-    </li>
+    <li>The commit is not buggy: commit_type 0</li>
+    <li>For target project, the commit is buggy but its true label was not found within W days: commit_type 1</li>
+    <li>For target project, the commit is buggy and its true label was found within W days: commit_type 2</li>
+    <li>For cross projects, the commit is buggy but its true label was not found within W days: commit_type 4</li>
+    <li>The true label of a defective commit was assigned (for all projects): commit_type 3</li>
   </ol>
 </ul>
 
