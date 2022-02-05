@@ -119,6 +119,7 @@ Attribute[16]: Timestamp when the commit was submitted to the repository.
 
 
 <h3> Data processing steps</h3>
+Data is processed using the following steps. After the processing, processed data needs to be sorted in ascending order of the timestamp to mainitain the chronology. 
 
 ```
 
