@@ -138,15 +138,15 @@ For each commit x:
 					
 			If x is from target project:	
 				Add an instance for training with:
-						Software change metrics=Attributes[1-14], contains_bug=False, 
-						timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)], 						    	    			project_no=relevant project index, commit_type=0
+					Software change metrics=Attributes[1-14], contains_bug=False, 
+					timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)], 						    	    			project_no=relevant project index, commit_type=0
 				Add an instance for testing with:
-							Software change metrics=Attributes[1-14], contains_bug=True, timestamp=[author_date_unix_timestamp], 						    	    	project_no=relevant project index, commit_type=1
+					Software change metrics=Attributes[1-14], contains_bug=True, timestamp=[author_date_unix_timestamp], 						    	    	project_no=relevant project index, commit_type=1
 							
 			If x is not from target project:
 				Add an instance for training with:
-						Software change metrics=Attributes[1-14], contains_bug=False, 
-						timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)], 						    	    			project_no=relevant project index, commit_type=4
+					Software change metrics=Attributes[1-14], contains_bug=False, 
+					timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)], 						    	    			project_no=relevant project index, commit_type=4
 						
 		If days_to_first_fix <= W:
 			Add an instance for training with :
@@ -154,8 +154,8 @@ For each commit x:
 					timestamp=[author_date_unix_timestamp]+[days_to_first_fix (converted into unix_timestamp)], 					 				project_no=relevant project index, commit_type=3
 			If x is from target project:
 				Add an instance for testing with :
-						Software change metrics=Attributes[1-14], contains_bug=True, 
-						timestamp=[author_date_unix_timestamp], project_no=relevant project index, commit_type=2
+					Software change metrics=Attributes[1-14], contains_bug=True, 
+					timestamp=[author_date_unix_timestamp], project_no=relevant project index, commit_type=2
 					
 
 ```					
