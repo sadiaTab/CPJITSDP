@@ -113,7 +113,7 @@ Attribute[16]: Timestamp when the commit was submitted to the repository.
 ```
   
   </li>
-  <li>Attribute[18]: commit_type is a number assigned based on the following scenario:
+  <li>Attribute[18]: commit_type is a number assigned based on the following data processing scenario:
   
 </ul>
 
