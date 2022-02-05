@@ -96,7 +96,7 @@ Attribute[15]: True label of the commit (whether the commit is really defect-ind
 <li>
 Attribute[16]: Timestamp when the commit was submitted to the repository. 
 </li>
-<li>Attribute[17]: Index number associated to a project. For example, in this paper, following array is used for the datasets. Index of this array is passed as argument dsIdx in the command. This index is the index of the target project. For example,  for Tomcat, dsIdx=0, for JGroups, dsIdx=1 etc. 
+<li>Attribute[17]: Index number associated to a project. For example, in this paper, following array is used for the datasets. Index of this array is passed as argument dsIdx in the command. This index is the index of the target project. For example,  if our target project is Tomcat, then dsIdx should be 0. For JGroups, dsIdx should be 1. 
 
 ```
 
