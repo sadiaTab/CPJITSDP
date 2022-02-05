@@ -129,35 +129,38 @@ For each commit x:
 			For both target and cross-projects, train x as clean at timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)])
 	If x is buggy:
 		If days_to_first_fix > W:
-			Add an instance for training with:
+			Add an instance (which will be used for training)*** with:
 					Software change metrics=Attributes[1-14], contains_bug=True, 
 					timestamp=[author_date_unix_timestamp]+[days_to_first_fix (converted into unix_timestamp)], 
 					project_no=relevant project index, commit_type=3
 					
 			If x is from target project:	
-				Add an instance for training with:
+				Add an instance (which will be used for training) with:
 					Software change metrics=Attributes[1-14], contains_bug=False, 
 					timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)], 
 					project_no=relevant project index, commit_type=0
-				Add an instance for testing with:
-					Software change metrics=Attributes[1-14], contains_bug=True, timestamp=[author_date_unix_timestamp], project_no=relevant project index, commit_type=1
+				Add an instance (which will be used for testing)  with:
+					Software change metrics=Attributes[1-14], contains_bug=True, timestamp=[author_date_unix_timestamp], 
+					project_no=relevant project index, commit_type=1
 							
 			If x is not from target project:
-				Add an instance for training with:
+				Add an instance (which will be used for training) with:
 					Software change metrics=Attributes[1-14], contains_bug=False, 
-					timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)], project_no=relevant project index, commit_type=4
+					timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)], 
+					project_no=relevant project index, commit_type=4
 						
 		If days_to_first_fix <= W:
-			Add an instance for training with :
+			Add an instance (which will be used for training) with :
 					Software change metrics=Attributes[1-14], contains_bug=True, 
 					timestamp=[author_date_unix_timestamp]+[days_to_first_fix (converted into unix_timestamp)], 
 					project_no=relevant project index, commit_type=3
 			If x is from target project:
-				Add an instance for testing with :
+				Add an instance (which will be used for testing) with :
 					Software change metrics=Attributes[1-14], contains_bug=True, timestamp=[author_date_unix_timestamp], 
 					project_no=relevant project index, commit_type=2
-					
 
+
+*** Training and testing between brackets is what the proposed approach will do, rather than something that needs to be done as part of the data preprocessing stage.
 ```					
 After the processing, processed data needs to be sorted in ascending order of the timestamp to mainitain the chronology.
 
