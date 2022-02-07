@@ -124,7 +124,8 @@ For each commit x:
 		Add an instance with: 
 			Software change metrics=Attributes[1-14], contains_bug=False, timestamp=[author_date_unix_timestamp], 
 			project_no=relevant project index, commit_type=0
-			(If x is from target project:
+			(The online  cpjitsdp will use this instance as follows:)
+			If x is from target project:
 				Test x as clean at timestamp=[author_date_unix_timestamp]
 			For both target and cross-projects, train x as clean at timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)])
 	If x is buggy:
@@ -160,7 +161,6 @@ For each commit x:
 					project_no=relevant project index, commit_type=2
 
 
-*** Training and testing between brackets is what the proposed approach will do, rather than something that needs to be done as part of the data preprocessing stage.
 ```					
 After the processing, processed data needs to be sorted in ascending order of the timestamp to mainitain the chronology.
 
