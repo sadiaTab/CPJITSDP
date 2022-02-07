@@ -130,7 +130,7 @@ For each commit x:
 			For both target and cross-projects, train x as clean at timestamp=[author_date_unix_timestamp]+[W days (converted into unix_timestamp)])
 	If x is buggy:
 		If days_to_first_fix > W:
-			Add an instance (which will be used for training)*** with:
+			Add an instance (which will be used for training) with:
 					Software change metrics=Attributes[1-14], contains_bug=True, 
 					timestamp=[author_date_unix_timestamp]+[days_to_first_fix (converted into unix_timestamp)], 
 					project_no=relevant project index, commit_type=3
